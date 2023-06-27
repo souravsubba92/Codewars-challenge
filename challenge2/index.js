@@ -7,3 +7,18 @@ Example: (Input --> Output)
 isIsogram "Dermatoglyphics" = true
 isIsogram "moose" = false
 isIsogram "aba" = false */
+
+function isIsogram(str) {
+  const lowerCasedStr = str.toLowerCase();
+  const newArray = [];
+  for (let char of lowerCasedStr) {
+    if (newArray.includes(char)) {
+      return false;
+    }
+    newArray.push(char);
+  }
+  return true;
+}
+
+console.log(isIsogram("moose"));
+console.log(isIsogram("direct"));
